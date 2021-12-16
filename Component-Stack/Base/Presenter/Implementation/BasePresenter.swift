@@ -1,13 +1,24 @@
 import Foundation
 
 class BasePresenter {
-    weak var viewController: BaseViewControllerProtocol?
     let interactor: BaseInteractorProtocol
+    weak var viewController: BaseViewControllerProtocol? {
+        didSet {
+            refreshViewModel()
+        }
+    }
 
-    let model: BaseRouteModel
+    let routeModel: BaseRouteModel
 
-    init(interactor: BaseInteractorProtocol, model: BaseRouteModel) {
+    init(interactor: BaseInteractorProtocol, routeModel: BaseRouteModel) {
         self.interactor = interactor
-        self.model = model
+        self.routeModel = routeModel
+    }
+}
+
+extension BasePresenter {
+    func refreshViewModel() {
+        let viewModel = BaseViewModel(statistics: routeModel.Base.statistics)
+        viewController?.model = viewModel
     }
 }

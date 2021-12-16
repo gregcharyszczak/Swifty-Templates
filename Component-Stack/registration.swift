@@ -4,8 +4,8 @@ container.register(BaseViewController.self) { resolver in
 }.implements(BaseViewControllerProtocol.self)
     container.register(BaseEventHandlerProtocol.self) { resolver in
     let interactor = resolver.resolve(BaseInteractorProtocol.self)!
-    let model = resolver.resolve(BaseRouteModel.self)!
-    return BasePresenter(interactor: interactor, model: model)
+    let routeModel = resolver.resolve(BaseRouteModel.self)!
+    return BasePresenter(interactor: interactor, routeModel: routeModel)
 }.initCompleted { resolver, eventHandler in
     let presenter = eventHandler as! BasePresenter
     presenter.viewController = resolver.resolve(BaseViewControllerProtocol.self)!

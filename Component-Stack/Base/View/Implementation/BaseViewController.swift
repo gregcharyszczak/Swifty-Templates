@@ -20,6 +20,11 @@ class BaseViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "Base"
-        self.view.backgroundColor = Asset.Colors.pastelBackground.color
     }
+}
+
+extension BaseViewController {
+	func refresh() {
+
+	}
 }
