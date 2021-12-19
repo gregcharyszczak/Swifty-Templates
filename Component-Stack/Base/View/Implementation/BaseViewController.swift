@@ -19,10 +19,18 @@ class BaseViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        initialize()
+    }
+}
+
+// MARK: Initialization
+extension BaseViewController {
+    func initialize() {
         self.title = "Base"
     }
 }
 
+// MARK: Refreshing
 extension BaseViewController {
 	func refresh() {
 

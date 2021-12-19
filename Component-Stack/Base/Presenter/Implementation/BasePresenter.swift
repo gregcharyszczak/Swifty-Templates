@@ -18,7 +18,7 @@ class BasePresenter {
 
 extension BasePresenter {
     func refreshViewModel() {
-        let viewModel = BaseViewModel(statistics: routeModel.Base.statistics)
+        let viewModel = BaseViewModel()
         viewController?.model = viewModel
     }
 }
