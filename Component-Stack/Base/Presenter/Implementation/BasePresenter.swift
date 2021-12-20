@@ -8,11 +8,8 @@ class BasePresenter {
         }
     }
 
-    let routeModel: BaseRouteModel
-
     init(interactor: BaseInteractorProtocol, routeModel: BaseRouteModel) {
         self.interactor = interactor
-        self.routeModel = routeModel
     }
 }
 
