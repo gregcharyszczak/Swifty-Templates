@@ -25,14 +25,14 @@ class BaseViewController: UIViewController {
 
 // MARK: Initialization
 extension BaseViewController {
-    func initialize() {
+    private func initialize() {
         self.title = "Base"
     }
 }
 
 // MARK: Refreshing
 extension BaseViewController {
-	func refresh() {
+	private func refresh() {
 
 	}
 }
