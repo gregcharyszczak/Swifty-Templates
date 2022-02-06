@@ -26,7 +26,7 @@ extension BaseCell {
 }
 
 // MARK: Setup
-extension LogCell {
+extension BaseCell {
     func setup() {
 
     }
