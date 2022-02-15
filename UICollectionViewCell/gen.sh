@@ -2,7 +2,7 @@
 
 # CONFIG
 ## path to the template folder
-template_path="./Base"
+template_path="./BaseCollectionViewCell"
 
 ## keyword to replace in every filename and inside the files. By default uses the folder name, but can be customized to something else
 template_keyword="$(basename "$template_path")"
