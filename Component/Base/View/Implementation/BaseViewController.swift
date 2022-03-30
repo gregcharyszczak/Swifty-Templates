@@ -1,6 +1,7 @@
 import UIKit
 
 class BaseViewController: UIViewController {
+    // MARK: Constants & Variables
     let eventHandler: BaseEventHandlerProtocol
     var model: BaseViewModel? {
         didSet {
@@ -8,6 +9,7 @@ class BaseViewController: UIViewController {
         }
     }
 
+    // MARK: Lifecycle
     init(eventHandler: BaseEventHandlerProtocol) {
         self.eventHandler = eventHandler
         super.init(nibName: nil, bundle: nil)
@@ -22,6 +24,8 @@ class BaseViewController: UIViewController {
         initialize()
         refresh()
     }
+
+    // MARK: Views
 }
 
 // MARK: Initialization
